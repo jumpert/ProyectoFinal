@@ -36,7 +36,7 @@ export class InMemoryDataService extends InMemoryDbService{
         description: "Puro sabor a chocolate"
       }
     ];
-    return items;
+    return {items};
   }
  
 }

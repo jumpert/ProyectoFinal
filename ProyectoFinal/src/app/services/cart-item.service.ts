@@ -8,17 +8,18 @@ import { CartItem } from '../models/cart-item';
 })
 export class CartItemService {
 
-  private imagesUrl = 'api/items';
+  private itemsUrl = 'api/items';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient) { }
 
   // GET chat from mock DB
   getItem(id: number): Observable<CartItem> {
-    const url = `${this.imagesUrl}/${id}`;
+    const url = `${this.itemsUrl}/${id}`;
     return this.http.get<CartItem>(url).pipe(
       tap(_ => this.log(`fetched item id=${id}`)),
       catchError(this.handleError<CartItem>(`getItem id=${id}`))
@@ -27,7 +28,7 @@ export class CartItemService {
 
   // GET chat from mock DB
   getItems(): Observable<CartItem[]> {
-    return this.http.get<CartItem[]>(this.imagesUrl).pipe(
+    return this.http.get<CartItem[]>(this.itemsUrl).pipe(
       tap(_ => this.log('fetched items')),
       catchError(this.handleError<CartItem[]>('getItems', []))
     );
@@ -40,6 +41,13 @@ export class CartItemService {
       return of(result as T);
     };
   }
+  /*private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error); 
+      this.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }*/
 
   // TODO: implement better logging mechanism
   private log(message: string) {

@@ -1,7 +1,14 @@
-<img src = "/assets/items/{{cartItem.imageUrl}} " alt="{{cartItem.name}}" class = "thumbnail" />
-<div class = "info">
-  <span> {{cartItem.name}} </span> 
-    <span class = "info-price" > {{cartItem.price}} $ </span>
+<img src="/assets/items/{{cartItem.imageUrl}} " alt="{{cartItem.name}}" class="thumbnail" />
+<div class="info">
+  <span><strong>{{cartItem.name}}</strong><br>{{cartItem.description}}</span>
+  <span></span>
+  <span class="info-price"> ${{cartItem.price}}</span>
 </div>
-<button (click)="onDeleteClick()" > <img src="/assets/close.svg " alt="Eliminar articulo" /> </button>
+<button (click)="onDeleteClick()"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+    class="bi bi-x-lg icon-red" viewBox="0 0 16 16">
+    <path
+      d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z">
+    </path>
+  </svg></button>
 
+<!-- <img src="/assets/close.svg " alt="Eliminar articulo"/> -->

@@ -12,21 +12,21 @@ export class ShoppingCartComponent implements OnInit {
   
   title: string = "Carrito";
   endMsg:string = "Finalizar Compra";
-  get total(): number {
-    return this.cartItems.reduce((acc, { price }) => (acc += price), 0);
-  }
   constructor(public cartItemService: CartItemService) {}
-
+  
   ngOnInit(): void {
     this.getItem();
   }
-
+  
+  get total(): number {
+    return this.cartItems.reduce((acc, { price }) => (acc += price), 0);
+  }
   deleteItem(itemToDelete: CartItem): void {
     this.cartItems = this.cartItems.filter((item) => item !== itemToDelete);
   }
   getItem():void {
     this.cartItemService.getItems()
-      .subscribe(cartItems => this.cartItems = cartItems);
+      .subscribe(Items => this.cartItems = Items);
   }
   
 }
