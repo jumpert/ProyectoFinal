@@ -9,13 +9,17 @@
 .title {
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 54px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid rgba(136, 136, 136, 0.712);
 }
 
 .total-label {
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
+    text-align: right;
+    align-self: right;
     color: #757575;
 }
 
@@ -58,3 +62,6 @@ button:disabled {
         display: none;
     }
   }
+.line-bottom {
+    border-bottom: 1px solid rgba(136, 136, 136, 0.712);
+}

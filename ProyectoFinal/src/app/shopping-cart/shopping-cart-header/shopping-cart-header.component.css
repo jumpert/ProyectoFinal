@@ -13,4 +13,6 @@
 }
 body {
     background-image: linear-gradient(0deg, #a61bf7 18.58%, #5e00ea 81.42%);
+    font-size: 2.5rem;
+    color: white;
 }
