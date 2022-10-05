@@ -14,15 +14,12 @@ export class ShoppingCartComponent implements OnInit {
   title: string = "Carrito";
   endMsg:string = "Finalizar Compra";
 
- 
-
-  
   constructor(public cartItemService: CartItemService, public shoppingCartService: ShoppingCartService) {}
   
   ngOnInit(): void {
     this.getItem();
   }
-  
+  showItems = true;
   onCartClicked(): void {
     this.toggleCartVisibility.emit();
   }
@@ -46,4 +43,9 @@ export class ShoppingCartComponent implements OnInit {
     this.cartItemService.getItems()
       .subscribe(Items => this.cartItems = Items);
   }
+ 
+  toggleItemVisibility():void {
+    this.showItems = !this.showItems;
+  }
+  
 }
