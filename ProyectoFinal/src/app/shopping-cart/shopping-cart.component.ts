@@ -1,6 +1,7 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CartItem } from '../models/cart-item';
 import { CartItemService } from '../services/cart-item.service';
+import { ShoppingCartService } from '../services/shopping-cart.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -8,14 +9,22 @@ import { CartItemService } from '../services/cart-item.service';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
-  cartItems: CartItem[] = [];
-  
+  public cartItems: CartItem[] = [];
+  @Output() toggleCartVisibility = new EventEmitter<void>();
   title: string = "Carrito";
   endMsg:string = "Finalizar Compra";
-  constructor(public cartItemService: CartItemService) {}
+
+ 
+
+  
+  constructor(public cartItemService: CartItemService, public shoppingCartService: ShoppingCartService) {}
   
   ngOnInit(): void {
     this.getItem();
+  }
+  
+  onCartClicked(): void {
+    this.toggleCartVisibility.emit();
   }
   
   get total(): number {
@@ -24,9 +33,17 @@ export class ShoppingCartComponent implements OnInit {
   deleteItem(itemToDelete: CartItem): void {
     this.cartItems = this.cartItems.filter((item) => item !== itemToDelete);
   }
+
+  get itemsCount(): number {
+    return this.cartItems.length;
+  }
+
+  addItem(item: CartItem): void {
+    this.cartItems = [...this.cartItems, item];
+  }
+  
   getItem():void {
     this.cartItemService.getItems()
       .subscribe(Items => this.cartItems = Items);
   }
-  
 }

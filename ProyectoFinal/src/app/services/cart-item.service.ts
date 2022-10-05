@@ -53,4 +53,5 @@ export class CartItemService {
   private log(message: string) {
     console.log(`CartItemService: ${message}`);
   }
+
 }

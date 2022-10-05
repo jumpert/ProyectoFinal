@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-inputs-field',
@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./inputs-field.component.css']
 })
 export class InputsFieldComponent implements OnInit {
-
+  
   constructor() { }
-
+  
   ngOnInit(): void {
   }
-
+  @Input()
+  phText!: string;
 }

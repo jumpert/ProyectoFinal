@@ -11,6 +11,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+  username:string = 'Usuario';
+  userpsw:string = 'Contraseña';
+  logText:string = 'Ingresar';
+
 
 }

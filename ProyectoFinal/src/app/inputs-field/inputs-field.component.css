@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.inputField {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 10pt;
+    background-color: rgba(204, 204, 204, 0.507);
+}
+
+.info-text {
+    font-weight: 600;
+    padding-right: 0.5rem;
+}
