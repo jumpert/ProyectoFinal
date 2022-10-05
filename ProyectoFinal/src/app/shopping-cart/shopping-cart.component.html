@@ -2,18 +2,18 @@
     <app-shopping-cart-header></app-shopping-cart-header>
 </header>
 
-    <p class="title"><img src="/assets/items/shopping-cart.png" alt="Carrito" class="miniIcon"/> {{title}}</p>
+<p class="title" ><img  src="/assets/items/shopping-cart.png" alt="Carrito" class="miniIcon"/> {{title}}</p>
 
-    <app-shopping-cart-item 
-        *ngFor="let item of cartItems" 
-        [cartItem]="item"
-        (cartItemDelete)="deleteItem(item)" class="line-bottom"
-    ></app-shopping-cart-item>
+<app-shopping-cart-item 
+    *ngFor="let item of cartItems" 
+    [cartItem]="item"
+    (cartItemDelete)="deleteItem(item)" class="line-bottom"
+></app-shopping-cart-item>
 
 
-    <p class="total"><span class="total-label">Total </span>$ {{total}}</p>
+<p class="total"><span class="total-label">Total </span>$ {{total}}</p>
 
-    <app-use-button id="bottomButton" [referenceText]="endMsg"></app-use-button>
-    <!-- <button id="bottomButton">Finalizar pedido</button> -->
+<app-use-button id="bottomButton" [referenceText]="endMsg"></app-use-button>
+    
 
 

@@ -50,7 +50,6 @@ button img {
     padding-right: 0.5rem;
 }
 
-@import "~bootstrap-icons/font/bootstrap-icons.css";
 .bi {
     display: inline-block;
     vertical-align: -0.125em;

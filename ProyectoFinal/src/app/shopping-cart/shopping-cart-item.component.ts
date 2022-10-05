@@ -13,12 +13,10 @@ export class ShoppingCartItemComponent implements OnInit {
  
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+  
   onDeleteClick(): void {
     this.cartItemDelete.emit();
-
   }
-
 
 }
