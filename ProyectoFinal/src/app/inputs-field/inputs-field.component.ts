@@ -11,6 +11,7 @@ export class InputsFieldComponent implements OnInit {
   
   ngOnInit(): void {
   }
+  @Input() formType!: string;  
   @Input()
-  phText!: string;
+  phText!: any;
 }

@@ -1,15 +1,14 @@
-<header>
-    <app-shopping-cart-header></app-shopping-cart-header>
-</header>
 
-<p class="title" ><img  src="/assets/items/shopping-cart.png" alt="Carrito" class="miniIcon"/> {{title}}</p>
 
-<app-shopping-cart-item 
-    *ngFor="let item of cartItems" 
-    [cartItem]="item"
-    (cartItemDelete)="deleteItem(item)" class="line-bottom"
-></app-shopping-cart-item>
+<p class="title"><button class="toggle mybtn flex-end title" data-toggle="tooltip" data-placement="top"(click)="toggleItemVisibility()"><img  src="/assets/items/shopping-cart.png" alt="Carrito" class="miniIcon"/> {{title}} </button></p>
 
+<ng-container *ngIf="showItems">
+    <app-shopping-cart-item 
+        *ngFor="let item of cartItems" 
+        [cartItem]="item"
+        (cartItemDelete)="deleteItem(item)" class="line-bottom"
+    ></app-shopping-cart-item>
+</ng-container>
 
 <p class="total"><span class="total-label">Total </span>$ {{total}}</p>
 

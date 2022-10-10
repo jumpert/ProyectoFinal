@@ -65,3 +65,12 @@ button:disabled {
 .line-bottom {
     border-bottom: 1px solid rgba(136, 136, 136, 0.712);
 }
+
+.mybtn, .mybtn:focus, .mybtn:hover{
+    background-color: transparent;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    
+    cursor: pointer;
+}

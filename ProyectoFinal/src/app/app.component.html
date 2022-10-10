@@ -1,3 +1,11 @@
-<app-shopping-cart></app-shopping-cart>
+<app-shopping-cart-header></app-shopping-cart-header>
 
-<!-- <app-login></app-login> -->
+<!-- <app-shopping-cart></app-shopping-cart> -->
+
+<!-- <app-product-card></app-product-card> -->
+<app-nav-tool
+  *ngIf="isMenuOpened"
+  (closeDrawer)="hideMenu()"
+></app-nav-tool>
+<app-shopping-cart *ngIf="isCartVisible"></app-shopping-cart>
+<router-outlet></router-outlet>

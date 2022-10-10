@@ -20,7 +20,7 @@ export class InMemoryDataService extends InMemoryDbService{
         description: "Rojas y verdes"
       },
       {
-        id: 1,
+        id: 2,
         imageUrl: "termoStanley.jpg",
         name: "Termo Stanley",
         price: 1500,
@@ -28,7 +28,7 @@ export class InMemoryDataService extends InMemoryDbService{
         description: "1Litro con tapón cebador"
       },
       {
-        id: 1,
+        id: 3,
         imageUrl: "chocolate.jpg",
         name: "Chocolate Milka",
         price: 150,
