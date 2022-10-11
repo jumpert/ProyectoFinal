@@ -1,0 +1,43 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 2rem;
+}
+
+.profile{
+    display: flex;
+    gap:10pt;
+}
+
+.profile-thumbnail{
+    width: 30pt;
+    height: 30pt;
+}
+
+.avatar{
+    width: 28pt;
+    height:auto;
+
+    border-radius: 50%;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    width: 94pt;
+    height: 30pt;
+    font-family: 'Roboto', sans-serif;
+}
+
+.name{
+    font-size: 13pt;
+    font-weight: 1000;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.email {
+    font-size: 11pt;
+}

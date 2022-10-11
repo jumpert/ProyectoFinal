@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { LoginService } from '../login.service';
+import { LoginService } from './login.service';
 
 
 @Component({
@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit{
 
   signIn(): void {
     const credentials = this.loginForm.value;
-    //this.logService.logIn();
+    this.logService.logIn(credentials);
     
   }
 }

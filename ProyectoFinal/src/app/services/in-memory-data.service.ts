@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 import { CartItem } from '../models/cart-item';
+import { User } from '../user/user';
 
 
 
@@ -36,7 +37,13 @@ export class InMemoryDataService extends InMemoryDbService{
         description: "Puro sabor a chocolate"
       }
     ];
-    return {items};
+
+    const users: User[] = [
+      {id: 0, firstName: 'admin', email:'admin@starmarket.com', password: 'admin123', profileImg: '../../assets/profile-pics/admin.jpg'},
+      {id: 1, firstName: 'user1', email: 'user1@gmail.com', password: 'user1123', profileImg: '../../assets/profile-pics/user1.jpg'},
+      {id: 2, firstName: 'user2', email: 'user2@gmail.com', password: 'user2123', profileImg: '../../assets/profile-pics/user2.jpg'}
+    ]
+    return {items, users};
   }
  
 }

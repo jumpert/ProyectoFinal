@@ -16,6 +16,7 @@ import { InputsFieldComponent } from './inputs-field/inputs-field.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { NavToolComponent } from './nav-tool/nav-tool.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserComponent } from './user/user.component';
 
 
 
@@ -30,6 +31,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ProductCardComponent,
     NavToolComponent,
     PageNotFoundComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,9 @@
   <button
     (click)="signIn()"
     type="submit"
-    [disabled]="(loginForm.statusChanges | async) !== 'VALID'" > 
+    [disabled]="(loginForm.statusChanges | async) !== 'VALID'"
+     > 
     Iniciar Sesión
   </button>
+  <!-- [disabled]="(loginForm.statusChanges | async) !== 'VALID'" -->
 </form>
