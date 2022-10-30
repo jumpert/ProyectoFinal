@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-import { LoginCredentials } from './login-credentials';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class LoginService {
 
   constructor(private router: Router) {}
 
-  logIn(credentials: LoginCredentials): void {
+  logIn(): void {
     this.loggedIn.next(true);
     this.redirectToHome();
   }

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from './login.service';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 
 @Component({
@@ -13,25 +13,28 @@ export class LoginComponent implements OnInit{
   userEmail:string = 'Ingrese su Email';
   userPsw:string = 'Ingrese su Contraseña';
   logText:string = 'Ingresar';
-  loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', Validators.required),
-  });
-  ngOnInit() {}
 
-  get emailControl(): FormControl {
-    return this.loginForm.get('email') as FormControl;
+  public myForm!:FormGroup;
+
+  constructor(private logService: LoginService, private fb:FormBuilder) {}
+  
+  endMsg:string = "Login";
+
+  ngOnInit(): void {
+    this.myForm = this.createMyForm();
   }
 
-  get passwordControl(): FormControl {
-    return this.loginForm.get('password') as FormControl;
+  private createMyForm():FormGroup{
+    return this.fb.group({
+      usuario:['',[Validators.required]],
+      password:['',Validators.required]
+    });
   }
 
-  constructor(private logService: LoginService) {}
-
-  signIn(): void {
-    const credentials = this.loginForm.value;
-    this.logService.logIn(credentials);
-    
+  public submitForm(){
+    alert("Se va a enviar el formulario");
+    console.log(this.myForm.value);
   }
+
+
 }

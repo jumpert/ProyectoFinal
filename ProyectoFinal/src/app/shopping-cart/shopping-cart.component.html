@@ -1,18 +1,19 @@
+<ng-container class="back">
+<p class="title"><button class="toggle mybtn flex-end title" data-toggle="tooltip" data-placement="top"
+        (click)="toggleItemVisibility()"><img src="/assets/items/shopping-cart.png" alt="Carrito"
+            class="miniIcon" /> {{title}} </button></p>
 
+<div class="card">
+    <div class="card-body ">
 
-<p class="title"><button class="toggle mybtn flex-end title" data-toggle="tooltip" data-placement="top"(click)="toggleItemVisibility()"><img  src="/assets/items/shopping-cart.png" alt="Carrito" class="miniIcon"/> {{title}} </button></p>
+        <ng-container *ngIf="showItems">
+            <app-shopping-cart-item *ngFor="let item of cartItems" [cartItem]="item" (cartItemDelete)="deleteItem(item)"
+                class="line-bottom"></app-shopping-cart-item>
+        </ng-container>
 
-<ng-container *ngIf="showItems">
-    <app-shopping-cart-item 
-        *ngFor="let item of cartItems" 
-        [cartItem]="item"
-        (cartItemDelete)="deleteItem(item)" class="line-bottom"
-    ></app-shopping-cart-item>
-</ng-container>
-
+    </div>
+</div>
 <p class="total"><span class="total-label">Total </span>$ {{total}}</p>
 
 <app-use-button id="bottomButton" [referenceText]="endMsg"></app-use-button>
-    
-
-
+</ng-container>
