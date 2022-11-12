@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, EventEmitter, Component, OnInit, Output } from '@angular/core';
 import { LoginService } from './login.service';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
@@ -10,15 +10,15 @@ import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LoginComponent implements OnInit{
+  @Output()
   userEmail:string = 'Ingrese su Email';
   userPsw:string = 'Ingrese su Contraseña';
   logText:string = 'Ingresar';
+  endMsg:string = "Login";
 
   public myForm!:FormGroup;
 
   constructor(private logService: LoginService, private fb:FormBuilder) {}
-  
-  endMsg:string = "Login";
 
   ngOnInit(): void {
     this.myForm = this.createMyForm();
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit{
 
   private createMyForm():FormGroup{
     return this.fb.group({
-      usuario:['',[Validators.required]],
+      email:['',[Validators.required]],
       password:['',Validators.required]
     });
   }

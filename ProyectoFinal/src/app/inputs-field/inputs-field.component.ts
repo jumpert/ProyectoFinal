@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-inputs-field',
   templateUrl: './inputs-field.component.html',
