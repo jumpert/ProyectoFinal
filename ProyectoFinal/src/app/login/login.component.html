@@ -1,24 +1,5 @@
 <h1>Inicia Sesión</h1>
 <form >
-  <app-inputs-field [phText]="userEmail" [formType]="userEmail" formControlName="email" ></app-inputs-field>
-  <div *ngIf="emailControl.invalid && (emailControl.touched || emailControl.dirty)">
-    <p *ngIf="emailControl.hasError('required')"> El campo es obligatorio</p>
-    <p *ngIf="emailControl.hasError('email')"> El campo debe ser un email válido</p>
-  </div>
-
-  <app-inputs-field [phText]="userPsw" [formType]="'password'" formControlName="password"></app-inputs-field>
-  <div *ngIf="passwordControl.invalid && (passwordControl.touched || passwordControl.dirty)">
-    <p *ngIf="passwordControl.hasError('required')"> El campo es obligatorio</p>
-
-  </div>
-
-
-  <button
-    (click)="signIn()"
-    type="submit"
-    [disabled]="(loginForm.statusChanges | async) !== 'VALID'"
-     > 
-    Iniciar Sesión
-  </button>
-  <!-- [disabled]="(loginForm.statusChanges | async) !== 'VALID'" -->
+  <app-inputs-field  formControlName="email" [phText]="userEmail"></app-inputs-field>
+  <app-inputs-field  formControlName="password" [phText]="userPsw"></app-inputs-field>
 </form>

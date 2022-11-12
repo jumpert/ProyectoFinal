@@ -14,3 +14,5 @@ export class InputsFieldComponent implements OnInit {
   @Input() formType!: any;  
   @Input() phText!: any;
 }
+
+

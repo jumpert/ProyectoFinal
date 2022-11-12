@@ -17,6 +17,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { NavToolComponent } from './nav-tool/nav-tool.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserComponent } from './user/user.component';
+import { SharedModule } from './shared/shared.module';
+import { LoginModule } from './login/login.module';
 
 
 
@@ -25,9 +27,7 @@ import { UserComponent } from './user/user.component';
     AppComponent,
     ShoppingCartComponent,
     ShoppingCartItemComponent,
-    UseButtonComponent,
     ShoppingCartHeaderComponent,
-    InputsFieldComponent,
     ProductCardComponent,
     NavToolComponent,
     PageNotFoundComponent,
@@ -36,10 +36,22 @@ import { UserComponent } from './user/user.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LoginModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    SharedModule,
+    
+  ],
+  exports: [
+    ShoppingCartComponent,
+    ShoppingCartItemComponent,
+    ShoppingCartHeaderComponent,
+    ProductCardComponent,
+    NavToolComponent,
+    PageNotFoundComponent,
+    UserComponent,
   ],
   providers: [
     CartItemService,

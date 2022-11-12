@@ -3,19 +3,17 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { LoginRoutingModule } from './login-routing.module';
 import { LoginService } from '../login.service';
-import { InputsFieldComponent } from '../inputs-field/inputs-field.component';
-
-
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [LoginComponent, InputsFieldComponent],
+  declarations: [LoginComponent],
   imports: [
     CommonModule,
     LoginRoutingModule,
+    SharedModule
   ],
   providers: [
-    LoginService,
-        
+    LoginService,        
   ],
   exports: [
     LoginComponent,
