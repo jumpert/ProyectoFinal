@@ -16,7 +16,6 @@ import { UseButtonComponent } from '../use-button/use-button.component';
   exports: [
     InputsFieldComponent,
     UseButtonComponent,
-
-  ]
+  ],
 })
 export class SharedModule { }

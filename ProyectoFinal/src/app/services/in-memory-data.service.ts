@@ -16,9 +16,9 @@ export class InMemoryDataService extends InMemoryDbService{
         id: 1,
         imageUrl: "manzanas.jpg",
         name: "Manzanas",
-        price: 30,
+        price: 80,
         quantity: 2,
-        description: "Rojas y verdes"
+        description: "Manzanas rojas de la mejor calidad de la zona. 1kg",
       },
       {
         id: 2,
@@ -34,7 +34,7 @@ export class InMemoryDataService extends InMemoryDbService{
         name: "Chocolate Milka",
         price: 150,
         quantity: 20,
-        description: "Puro sabor a chocolate"
+        description: "El intenso sabor del chocolate, en su presentación de 100g"
       }
     ];
 
