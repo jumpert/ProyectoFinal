@@ -1,13 +1,12 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { LoginService } from './login.service';
-
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush,  
 })
 export class LoginComponent implements OnInit{
   userEmail:string = 'Ingrese su Email';
@@ -31,7 +30,7 @@ export class LoginComponent implements OnInit{
 
   signIn(): void {
     const credentials = this.loginForm.value;
-    this.logService.logIn(credentials);
+    //this.logService.logIn();
     
   }
 }
