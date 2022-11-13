@@ -1,0 +1,15 @@
+.carousel{
+    max-height: 50%;
+    
+}
+
+.thumbnail {
+    width: 45px;
+    height: 45px;
+
+    background-color: #d9dfe5;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 2px;
+    min-width: 45px;
+}

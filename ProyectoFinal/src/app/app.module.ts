@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { UserComponent } from './user/user.component';
 import { SharedModule } from './shared/shared.module';
 import { LoginModule } from './login/login.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { LoginModule } from './login/login.module';
     ProductCardComponent,
     NavToolComponent,
     UserComponent,
-    PageNotFoundComponent,
+    PageNotFoundComponent
     
   ],
   imports: [
@@ -39,7 +40,8 @@ import { LoginModule } from './login/login.module';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    NgbModule
   ],
   providers: [
     CartItemService,

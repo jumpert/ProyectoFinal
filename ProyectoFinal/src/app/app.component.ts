@@ -17,7 +17,7 @@ export class AppComponent {
 
   showMenu(): void {
     this.isCartVisible = false;
-    this.isMenuOpened = true;
+    this.isMenuOpened = false;
   }
 
   hideMenu(): void {

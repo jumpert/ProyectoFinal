@@ -1,4 +1,4 @@
-<div class="img-container">
+<!-- <div class="img-container">
     <img src="/assets/items/{{ product.imageUrl }}" alt="{{ product.name }}" />
   </div>
   <div class="info">
@@ -9,4 +9,21 @@
   </div>
   <button (click)="addToCart()" title="Añadir al Carrito">
     <img src="/assets/add_white.svg" alt="+" />
-  </button>
+  </button> -->
+
+  <ngb-carousel  *ngIf="items">
+    <ng-template class="carousel" *ngFor="let item of items" ngbSlide>
+      <div class="picsum-img-wrapper ">
+        <img src="/assets/items/{{ item.imageUrl }}" alt="{{ item.name }}"  class="mh-50"/>
+      </div>
+      <div class="info">
+        <p>
+          <strong>{{ item.name }}</strong>
+        </p>
+        <p>{{ item.price }} &euro;</p>
+      </div>
+      <button (click)="addToCart()" title="Añadir al Carrito" >
+        <i class="bi bi-bag-plus-fill"></i> 
+      </button> 
+    </ng-template>
+  </ngb-carousel>

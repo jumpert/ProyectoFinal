@@ -1,8 +1,7 @@
-<app-shopping-cart-header></app-shopping-cart-header>
-
-<app-nav-tool
-  *ngIf="isMenuOpened"
-  (closeDrawer)="hideMenu()"
-></app-nav-tool>
-
+<div class="sticky-top">
+  <app-shopping-cart-header></app-shopping-cart-header>
+</div>
+<div>
+  <app-nav-tool *ngIf="isMenuOpened" (closeDrawer)="hideMenu()"></app-nav-tool>
+</div>
 <router-outlet></router-outlet>

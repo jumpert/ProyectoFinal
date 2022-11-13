@@ -58,11 +58,11 @@ button:disabled {
     cursor: not-allowed;
 }
 
-@media (min-width: 650px) {
+/*@media (min-width: 650px) {
     #bottomButton{
         display: none;
     }
-  }
+  }*/
 .line-bottom {
     border-bottom: 1px solid rgba(136, 136, 136, 0.712);
 }

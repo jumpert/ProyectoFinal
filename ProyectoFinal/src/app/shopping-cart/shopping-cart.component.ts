@@ -25,6 +25,7 @@ export class ShoppingCartComponent implements OnInit {
   }
   
   get total(): number {
+
     return this.cartItems.reduce((acc, { price }) => (acc += price), 0);
   }
   deleteItem(itemToDelete: CartItem): void {
@@ -46,6 +47,9 @@ export class ShoppingCartComponent implements OnInit {
  
   toggleItemVisibility():void {
     this.showItems = !this.showItems;
+  }  
+
+  checkout(): void {
+    this.cartItems = [];
   }
-  
 }

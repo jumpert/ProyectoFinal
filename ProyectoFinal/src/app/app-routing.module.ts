@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
@@ -12,13 +13,17 @@ const routes: Routes = [
   },
   {
     path: "login",
-    //component: LoginComponent,
-     loadChildren: () =>
-     import('./login/login.module').then((m) => m.LoginModule),
+    component: LoginComponent,
+    /* loadChildren: () =>
+     import('./login/login.module').then((m) => m.LoginModule),*/
   },
   {
     path: "shoppingCart",
     component: ShoppingCartComponent,
+  },
+  {
+    path: "home",
+    component: ProductCardComponent,
   },
   {
     path: "**",

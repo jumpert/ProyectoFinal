@@ -1,20 +1,28 @@
+<div class="d-flex justify-content-center">
 <h1>Inicia Sesión</h1>
-
+</div>
+<div class="d-flex justify-content-center align-items-center">
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
-  <div>
-    <div class="mb-3 row">
+  <div >
+    <div class=" mb-3 row">
       <div class="col-sm-10">
-        <input formControlName="email" type="text" class="form-control-email inputField" id="inputEmail"
-          placeholder="Enter your email address">
+        <!-- <app-inputs-field formControlName="email" type="text" class="form-control-email"  [phText]="userEmail"></app-inputs-field> -->
+        <input formControlName="email" type="text" class="form-control-email shadow p-3 mb-5 bg-body rounded" id="inputEmail"
+          placeholder="{{userEmail}}">
       </div>
     </div>
     <div class="mb-3 row">
       <div class="col-sm-10">
-        <input formControlName="password" type="password" class="form-control-password inputField" id="inputPassword"
-          placeholder="Enter your password">
+        <!-- <app-inputs-field formControlName="password" type="text" class="form-control-password" id="inputPassword" [phText]="userPsw"></app-inputs-field> -->
+        <input formControlName="password" type="password" class="form-control-password shadow p-3 mb-5 bg-body rounded" id="inputPassword"
+          placeholder="{{userPsw}}">
       </div>
     </div>
 
   </div>
-  <app-use-button [referenceText]="endMsg"></app-use-button>
+  <div class="container-sm-2">
+    <app-use-button class="" [referenceText]="logText" ></app-use-button>
+  </div>
+
 </form>
+</div>
