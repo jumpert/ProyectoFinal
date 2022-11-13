@@ -1,0 +1,11 @@
+<h1>Profile</h1>
+<div *ngFor="let user of users" class="profile flex">
+    <div id="profile-thumbnail">
+      <img src={{user.profileImg}} alt="" class="avatar"/>
+    </div>
+    
+    <div class="profile-info">
+      <p class="name">{{user.firstName}}</p>
+      <p class="email">{{user.email}}</p>
+    </div>
+</div>

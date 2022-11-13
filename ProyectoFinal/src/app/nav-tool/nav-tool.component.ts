@@ -5,7 +5,7 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
-import { LoginService } from '../login.service';
+import { LoginService } from '../login/login.service';
 
 
 @Component({

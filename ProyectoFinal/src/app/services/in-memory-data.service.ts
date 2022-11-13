@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 import { CartItem } from '../models/cart-item';
+import { User } from '../user/user';
 
 
 
@@ -15,9 +16,9 @@ export class InMemoryDataService extends InMemoryDbService{
         id: 1,
         imageUrl: "manzanas.jpg",
         name: "Manzanas",
-        price: 30,
+        price: 80,
         quantity: 2,
-        description: "Rojas y verdes"
+        description: "Manzanas rojas de la mejor calidad de la zona. 1kg",
       },
       {
         id: 2,
@@ -33,10 +34,16 @@ export class InMemoryDataService extends InMemoryDbService{
         name: "Chocolate Milka",
         price: 150,
         quantity: 20,
-        description: "Puro sabor a chocolate"
+        description: "El intenso sabor del chocolate, en su presentación de 100g"
       }
     ];
-    return {items};
+
+    const users: User[] = [
+      {id: 0, firstName: 'admin', email:'admin@starmarket.com', password: 'admin123', profileImg: '../../assets/profile-pics/admin.jpg'},
+      {id: 1, firstName: 'user1', email: 'user1@gmail.com', password: 'user1123', profileImg: '../../assets/profile-pics/user1.jpg'},
+      {id: 2, firstName: 'user2', email: 'user2@gmail.com', password: 'user2123', profileImg: '../../assets/profile-pics/user2.jpg'}
+    ]
+    return {items, users};
   }
  
 }

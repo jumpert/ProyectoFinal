@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-inputs-field',
   templateUrl: './inputs-field.component.html',
@@ -11,7 +10,8 @@ export class InputsFieldComponent implements OnInit {
   
   ngOnInit(): void {
   }
-  @Input() formType!: string;  
-  @Input()
-  phText!: any;
+  @Input() formType!: any;  
+  @Input() phText!: any;
 }
+
+

@@ -1,21 +1,24 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { BehaviorSubject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
-  loggedIn = false;
+  private loggedIn = new BehaviorSubject<boolean>(true);
+  loggedIn$ = this.loggedIn.asObservable();
 
   constructor(private router: Router) {}
 
   logIn(): void {
-    this.loggedIn = true;
+    this.loggedIn.next(true);
     this.redirectToHome();
   }
 
   logOut(): void {
-    this.loggedIn = false;
+    this.loggedIn.next(false);
     this.redirectToHome();
   }
 
