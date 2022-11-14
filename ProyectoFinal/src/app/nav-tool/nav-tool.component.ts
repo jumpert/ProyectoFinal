@@ -1,4 +1,5 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   EventEmitter,
   HostListener,
@@ -11,7 +12,8 @@ import { LoginService } from '../login/login.service';
 @Component({
   selector: 'app-nav-tool',
   templateUrl: './nav-tool.component.html',
-  styleUrls: ['./nav-tool.component.css']
+  styleUrls: ['./nav-tool.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavToolComponent implements OnInit {
   get isUserLoggedIn(): boolean {

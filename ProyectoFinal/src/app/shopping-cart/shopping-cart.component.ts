@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CartItem } from '../models/cart-item';
 import { CartItemService } from '../services/cart-item.service';
 import { ShoppingCartService } from '../services/shopping-cart.service';
@@ -6,7 +6,8 @@ import { ShoppingCartService } from '../services/shopping-cart.service';
 @Component({
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
-  styleUrls: ['./shopping-cart.component.css']
+  styleUrls: ['./shopping-cart.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShoppingCartComponent implements OnInit {
   public cartItems: CartItem[] = [];
