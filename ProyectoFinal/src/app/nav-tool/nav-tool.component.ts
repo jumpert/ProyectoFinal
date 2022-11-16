@@ -13,7 +13,7 @@ import { LoginService } from '../login/login.service';
   selector: 'app-nav-tool',
   templateUrl: './nav-tool.component.html',
   styleUrls: ['./nav-tool.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  //changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavToolComponent implements OnInit {
   get isUserLoggedIn(): boolean {

@@ -4,12 +4,14 @@
 }
 
 .thumbnail {
-    width: 45px;
-    height: 45px;
+    width: auto;
+    height: 25rem;
 
-    background-color: #d9dfe5;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
+    border-radius: 4px;
     padding: 2px;
     min-width: 45px;
 }
+
+.ms-1 {
+    margin-left: (spacer * .25) !important;
+  }
