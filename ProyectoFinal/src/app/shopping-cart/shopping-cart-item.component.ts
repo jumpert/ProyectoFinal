@@ -4,8 +4,7 @@ import { CartItem } from '../models/cart-item';
 @Component({
   selector: 'app-shopping-cart-item',
   templateUrl: './shopping-cart-item.component.html',
-  styleUrls: ['./shopping-cart-item.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  styleUrls: ['./shopping-cart-item.component.css']
 })
 export class ShoppingCartItemComponent implements OnInit {
   @Input() cartItem!: CartItem;

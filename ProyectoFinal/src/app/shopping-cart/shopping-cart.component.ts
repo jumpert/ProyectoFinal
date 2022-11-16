@@ -7,7 +7,6 @@ import { ShoppingCartService } from '../services/shopping-cart.service';
   selector: 'app-shopping-cart',
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShoppingCartComponent implements OnInit {
   public cartItems: CartItem[] = [];
