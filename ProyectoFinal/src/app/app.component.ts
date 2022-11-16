@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'ProyectoFinal';
 
   isCartVisible = false;
-  isMenuOpened = false;
+  isMenuOpened = true;
 
   toggleCartVisibility(): void {
     this.isCartVisible = !this.isCartVisible;

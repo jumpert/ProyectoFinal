@@ -5,9 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShoppingCartItemComponent } from './shopping-cart/shopping-cart-item.component';
-
-
-import { ShoppingCartHeaderComponent } from './shopping-cart/shopping-cart-header/shopping-cart-header.component';
 import { CartItemService } from './services/cart-item.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
@@ -25,11 +22,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppComponent,
     ShoppingCartComponent,
     ShoppingCartItemComponent,
-    ShoppingCartHeaderComponent,
     ProductCardComponent,
     NavToolComponent,
     UserComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
     
   ],
   imports: [

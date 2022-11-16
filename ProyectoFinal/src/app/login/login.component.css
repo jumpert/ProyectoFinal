@@ -1,5 +1,5 @@
 :host {
-    height: max-content;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,15 +1,4 @@
-<!-- <div class="img-container">
-    <img src="/assets/items/{{ product.imageUrl }}" alt="{{ product.name }}" />
-  </div>
-  <div class="info">
-    <span
-      ><strong>{{ product.name }}</strong>
-    </span>
-    <span>{{ product.price }} &euro;</span>
-  </div>
-  <button (click)="addToCart()" title="Añadir al Carrito">
-    <img src="/assets/add_white.svg" alt="+" />
-  </button> -->
+
 <div class="carousel">
   <ngb-carousel  *ngIf="items">
     <ng-template *ngFor="let item of items" ngbSlide>
@@ -34,8 +23,3 @@
     
     
 </div>
-<!-- <div class="d-grid gap-3 justify-content-ml-center ">
-  <button (click)="addToCart()" title="Añadir al Carrito" class="btn btn-primary btn-lg">
-    <img src="/assets/add_white.svg" alt="+" />
-  </button>
-</div> -->
