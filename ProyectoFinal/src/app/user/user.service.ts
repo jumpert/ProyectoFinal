@@ -15,11 +15,11 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
   
-  getUser(firstName: string): Observable<User> {
-    const url = `${this.userUrl}/${firstName}`;
+  getUser(id: number): Observable<User> {
+    const url = `${this.userUrl}/${id}`;
     return this.http.get<User>(url).pipe(
-      tap((_) => console.log(`fetched user with name=${firstName}`)),
-      catchError(this.handleError<User>(`getUser name=${firstName}`))
+      tap((_) => console.log(`fetched user with id=${id}`)),
+      catchError(this.handleError<User>(`getUser id=${id}`))
     );
   }
 

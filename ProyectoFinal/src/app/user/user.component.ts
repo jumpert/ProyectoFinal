@@ -16,6 +16,7 @@ export class UserComponent implements OnInit {
     //{id: 2, firstName: 'user2', email: 'user2@gmail.com', password: 'user2123', profileImg: '../../assets/profile-pics/user2.jpg'}
   ];
 
+  user: User = {id: 0, firstName: 'admin', email:'admin@starmarket.com', password: 'admin123', profileImg: '../../assets/profile-pics/admin.jpg'};
   profilePicture?: string;
 
   constructor(private userService: UserService) { }
@@ -28,6 +29,11 @@ export class UserComponent implements OnInit {
   getUsers(): void {
     this.userService.getUsers()
       .subscribe(users => this.users = users);
+  }
+
+  getUser(id:number)  {
+    this.userService.getUser(id)
+      .subscribe(user => this.user = user);
   }
   
   isAdmin(id: number): boolean {

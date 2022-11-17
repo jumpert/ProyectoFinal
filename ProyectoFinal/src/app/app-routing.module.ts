@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,14 @@ const routes: Routes = [
   {
     path: "home",
     component: ProductCardComponent,
+  },
+  {
+    path: "users/:id",
+    component: UserComponent,
+  },
+  {
+    path: "users",
+    component: UserComponent,
   },
   {
     path: "**",
