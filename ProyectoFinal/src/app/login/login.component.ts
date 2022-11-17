@@ -37,5 +37,9 @@ export class LoginComponent implements OnInit{
     console.log(this.myForm.value);
   }
 
+  public logIn() {
+    this.logService.logIn();
+    console.log("logeado");
+  }
 
 }

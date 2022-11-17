@@ -41,3 +41,12 @@
 .email {
     font-size: 11pt;
 }
+
+.thumbnail {
+    width: auto;
+    height: 15rem;
+
+    border-radius: 4px;
+    padding: 2px;
+    min-width: 45px;
+}

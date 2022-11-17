@@ -33,7 +33,7 @@ export class NavToolComponent implements OnInit {
   }
 
   logOut(): void {
-    //this.logService.logOut();
+    this.logService.logOut();
   }
 
 }
