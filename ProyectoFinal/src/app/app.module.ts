@@ -10,7 +10,6 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductCardComponent } from './product-card/product-card.component';
-import { NavToolComponent } from './nav-tool/nav-tool.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { UserComponent } from './user/user.component';
 import { SharedModule } from './shared/shared.module';
@@ -23,7 +22,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ShoppingCartComponent,
     ShoppingCartItemComponent,
     ProductCardComponent,
-    NavToolComponent,
     UserComponent,
     PageNotFoundComponent,
     

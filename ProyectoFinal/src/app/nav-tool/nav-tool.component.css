@@ -1,0 +1,27 @@
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-weight: 600;
+    
+}
+a {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.navbar{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-toggler{
+    border: white;
+    background-color: white;
+    cursor: pointer;
+    justify-content: center;
+} 

@@ -5,8 +5,7 @@
 
 .thumbnail {
     width: auto;
-    height: 25rem;
-
+    height: 22rem;
     border-radius: 4px;
     padding: 2px;
     min-width: 45px;
@@ -15,3 +14,21 @@
 .ms-1 {
     margin-left: (spacer * .25) !important;
   }
+
+@media (min-width: 768px) {
+    #text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 60%;
+    margin-left: 20%;
+    }
+}
+@media (min-width: 400px) {
+    #text {
+        font-size: 1.5rem;
+        font-weight: 600;
+        width: 80%;
+        margin-left: 10%;
+        }
+}
+

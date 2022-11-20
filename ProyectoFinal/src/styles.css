@@ -4,3 +4,6 @@
 .ng-dirty.ng-invalid:is(input, textarea) {
   outline: 2px solid #bd0c0c;
 }
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, "Roboto", sans-serif;
+}

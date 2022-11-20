@@ -2,25 +2,23 @@
   <ngb-carousel *ngIf="items">
     <ng-template *ngFor="let item of items" ngbSlide>
 
-      <div class=" d-flex justify-content-center ">
+      <div class=" d-flex justify-content-center">
         <img src="/assets/items/{{ item.imageUrl }}" alt="{{ item.name }}" class="flex thumbnail align-text-center " />
       </div>
-      <div class="w-50">
-        <div class="d-grid gap-3 justify-content-ml-center">
+      <div class="d-flex justify-content-start" id="text">
+        <div class="d-grid gap-3 ">
           <div class="p-2 "><strong>{{ item.name }}</strong></div>
           <div class="p-1 ">
             <p>&dollar; {{ item.price }} </p>
           </div>
         </div>
       </div>
-      <div class="">
-        <button (click)="addToCart()" title="Añadir al Carrito">
-          <i class="bi bi-bag-plus"></i>
-        </button>
-      </div>
     </ng-template>
   </ngb-carousel>
-
-
-
+  <div class="d-flex justify-content-center bottom-50 ">
+    
+    <button (click)="addToCart()" title="Añadir al Carrito">
+        <i class="bi bi-bag-plus"> Añadir al carrito</i>
+      </button>
+  </div>
 </div>
