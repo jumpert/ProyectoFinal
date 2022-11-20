@@ -30,7 +30,7 @@ export class InMemoryDataService extends InMemoryDbService{
       },
       {
         id: 3,
-        imageUrl: "chocolate.jpg",
+        imageUrl: "chocolate.jpg", // imageUrl: https://user-images.githubusercontent.com/88668277/202906014-4ff3e37f-9129-4a14-adf6-98759004930f.jpg
         name: "Chocolate Milka",
         price: 150,
         quantity: 20,
