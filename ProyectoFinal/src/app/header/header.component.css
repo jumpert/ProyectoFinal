@@ -11,8 +11,18 @@
     /*border-radius: 50%;*/
     
 }
-body {
+div {
     background-image: linear-gradient(0deg, #a61bf7 18.58%, #5e00ea 81.42%);
-    font-size: 2.5rem;
     color: white;
+    align-items: center;
+    
+}
+span {
+    font-size: 30pt;
+    font-weight: 600;
+    text-shadow: 0 0 10pt #000;
+}
+#navTool {
+    margin-right: 1rem;
+    align-content: center;
 }
