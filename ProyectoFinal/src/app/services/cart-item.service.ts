@@ -8,14 +8,13 @@ import { CartItem } from '../models/cart-item';
 })
 export class CartItemService {
 
-  private itemsUrl = 'api/items';
+  private itemsUrl = 'http://localhost:3000/api/v1/items';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
   };
 
-  constructor(
-    private http: HttpClient) { }
+  constructor( private http: HttpClient) { }
 
   // GET chat from mock DB
   getItem(id: number): Observable<CartItem> {
@@ -30,7 +29,7 @@ export class CartItemService {
   getItems(): Observable<CartItem[]> {
     return this.http.get<CartItem[]>(this.itemsUrl).pipe(
       tap(_ => this.log('fetched items')),
-      catchError(this.handleError<CartItem[]>('getItems', []))
+      catchError(this.handleError<CartItem[]>('getItems'))
     );
   }
 
@@ -41,13 +40,7 @@ export class CartItemService {
       return of(result as T);
     };
   }
-  /*private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(error); 
-      this.log(`${operation} failed: ${error.message}`);
-      return of(result as T);
-    };
-  }*/
+ 
 
   // TODO: implement better logging mechanism
   private log(message: string) {

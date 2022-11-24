@@ -3,9 +3,7 @@
     <ng-template *ngFor="let item of items" ngbSlide>
 
       <div class=" d-flex justify-content-center">
-        <img src="/assets/items/{{ item.imageUrl }}" alt="{{ item.name }}" class="flex thumbnail align-text-center " />
-        <!--  Importar imagenes desde mongoDB
-          <img src="{{ item.imageUrl }}" alt="{{ item.name }}" class="flex thumbnail align-text-center " /> -->
+        <img src="{{ item.imageSrc }}" alt="{{ item.name }}" class="flex thumbnail align-text-center " />
         
       </div>
       <div class="d-flex justify-content-start" id="text">

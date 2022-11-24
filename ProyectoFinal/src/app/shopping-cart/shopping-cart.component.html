@@ -7,7 +7,7 @@
   <div class="card">
     <div class="card-body ">
 
-      <ng-container *ngIf="showItems">
+      <ng-container *ngIf="showItems" >
         <app-shopping-cart-item *ngFor="let item of cartItems" [cartItem]="item" (cartItemDelete)="deleteItem(item)"
           class="line-bottom"></app-shopping-cart-item>
       </ng-container>

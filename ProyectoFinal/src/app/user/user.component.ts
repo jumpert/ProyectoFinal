@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { User } from './user';
 import { UserService } from './user.service';
 
@@ -10,13 +10,9 @@ import { UserService } from './user.service';
 })
 export class UserComponent implements OnInit {
 
-  users: User[] = [
-    //{id: 0, firstName: 'admin', email:'admin@starmarket.com', password: 'admin123', profileImg: '../../assets/profile-pics/admin.jpg'},
-    //{id: 1, firstName: 'user1', email: 'user1@gmail.com', password: 'user1123', profileImg: '../../assets/profile-pics/user1.jpg'},
-    //{id: 2, firstName: 'user2', email: 'user2@gmail.com', password: 'user2123', profileImg: '../../assets/profile-pics/user2.jpg'}
-  ];
-
-  user: User = {id: 0, firstName: 'admin', email:'admin@starmarket.com', password: 'admin123', profileImg: '../../assets/profile-pics/admin.jpg'};
+  users: User[] = [];
+  @Input() user!: User;
+  //user: User = {id: 0, firstName: 'admin', email:'admin@starmarket.com', password: 'admin123', profileImg: '../../assets/profile-pics/admin.jpg'};
   profilePicture?: string;
 
   constructor(private userService: UserService) { }

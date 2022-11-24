@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { NgbCarousel, NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { CartItem } from '../models/cart-item';
 import { Product } from '../models/product';
@@ -9,7 +9,7 @@ import { ShoppingCartService } from '../services/shopping-cart.service';
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
-  styleUrls: ['./product-card.component.css']
+  styleUrls: ['./product-card.component.css'],
 })
 export class ProductCardComponent implements OnInit {
 
@@ -23,15 +23,15 @@ export class ProductCardComponent implements OnInit {
   @Input() items: CartItem[] = [];
   @Input() product!: Product;
   constructor(public cartItemService: CartItemService, private scService: ShoppingCartService, config: NgbCarouselConfig) {
-    config.interval = 0;
+    config.interval = 4000 ;
   }
   ngOnInit(): void {
-    this.getItem();
+    this.getItems();
   }
 
-  getItem():void {
+  getItems():void {
     this.cartItemService.getItems()
-      .subscribe(Items => this.items = Items);
+      .subscribe(items => this.items = items);
   }
 
   addToCart(): void {
@@ -39,14 +39,16 @@ export class ProductCardComponent implements OnInit {
     this.scService.addItem(cartItem);
   }
   products2CartItems(product: Product): CartItem{
-    const {price, name, imageUrl} = product;
+    const {price, name, imageSrc} = product;
     const id = 999;
     const quantity = 1;
     const description = "";
-    return {price, name, imageUrl, id, quantity, description};
+    const type = "";
+    return {type, imageSrc,name, price, quantity, description, id};
   }
+
   captureSwipeStart($event: TouchEvent) {
-    this.swipeStartXPos = $event.changedTouches[0].clientX; //Lo que hace esto es obtener la cordenada x del punto de contacto (touch) en relacion a la ventana grafica
+    this.swipeStartXPos = $event.changedTouches[1].clientX; //Lo que hace esto es obtener la coordenada x del punto de contacto (touch) en relacion a la ventana grafica
   }
 
   swipePost($event: TouchEvent) {
@@ -58,15 +60,15 @@ export class ProductCardComponent implements OnInit {
     const swipeFinalXPos = $event.changedTouches[0].clientX;
     const xDifference = swipeFinalXPos - this.swipeStartXPos; 
 
-    if (Math.abs(xDifference) > 70) { //Si la diferencia es mayor a 70 se mueve la imagen/slide
-      if (xDifference < 0) { // Si la diferencia es negatica, se mueve a la derecha.
+    if (Math.abs(xDifference) > 70) { 
+      if (xDifference < 0) { 
         this.ngCarousel.next();
-      } else { //Si la diferencia es positivia se mueve a la izquierda.
+      } else { 
         this.ngCarousel.prev();
       }
     }
 
-    this.swipeStartXPos = undefined; //Setea el punto donde el empieza a tocar.
+    this.swipeStartXPos = undefined; 
   }
 
 }

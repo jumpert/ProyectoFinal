@@ -8,36 +8,13 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
-  {
-    path: "",
-    component: LoginComponent,
-  },
-  {
-    path: "login",
-    component: LoginComponent,
-    /* loadChildren: () =>
-     import('./login/login.module').then((m) => m.LoginModule),*/
-  },
-  {
-    path: "shoppingCart",
-    component: ShoppingCartComponent,
-  },
-  {
-    path: "home",
-    component: ProductCardComponent,
-  },
-  {
-    path: "users/:id",
-    component: UserComponent,
-  },
-  {
-    path: "users",
-    component: UserComponent,
-  },
-  {
-    path: "**",
-    component: PageNotFoundComponent,
-  }
+  { path: '', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'shoppingCart', component: ShoppingCartComponent },
+  { path: 'home', component: ProductCardComponent },
+  { path: 'users/:id', component: UserComponent },
+  { path: 'users', component: UserComponent },
+  { path: '**', component: PageNotFoundComponent}
 ]
 
 @NgModule({

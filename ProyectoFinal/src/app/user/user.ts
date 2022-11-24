@@ -1,7 +1,8 @@
 export interface User {
-    id: number,
-    firstName: string,
-    email: string,
-    password: string,
-    profileImg: string
+    _id: number;
+    firstName: string;
+    email: string;
+    password: string;
+    profileImg: string;
+    cart: string[];
 }

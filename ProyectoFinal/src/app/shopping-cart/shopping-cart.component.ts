@@ -17,7 +17,7 @@ export class ShoppingCartComponent implements OnInit {
   constructor(public cartItemService: CartItemService, public shoppingCartService: ShoppingCartService) {}
   
   ngOnInit(): void {
-    this.getItem();
+    this.getItems();
   }
   showItems = true;
   onCartClicked(): void {
@@ -40,7 +40,7 @@ export class ShoppingCartComponent implements OnInit {
     this.cartItems = [...this.cartItems, item];
   }
   
-  getItem():void {
+  getItems():void {
     this.cartItemService.getItems()
       .subscribe(Items => this.cartItems = Items);
   }

@@ -15,11 +15,6 @@ export class AppComponent {
     this.isCartVisible = !this.isCartVisible;
   }
 
-  showMenu(): void {
-    this.isCartVisible = false;
-    this.isMenuOpened = false;
-  }
-
   hideMenu(): void {
     this.isMenuOpened = false;
   }
