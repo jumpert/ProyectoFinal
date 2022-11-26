@@ -1,6 +1,6 @@
 
 import { ChangeDetectionStrategy, EventEmitter, Component, OnInit, Output } from '@angular/core';
-import { LoginService } from './login.service';
+import { LoginService } from '../services/login.service';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 
 @Component({

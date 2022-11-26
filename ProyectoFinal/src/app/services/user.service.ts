@@ -1,6 +1,6 @@
 import { catchError, Observable, of, tap } from 'rxjs';
 
-import { User } from './user';
+import { User } from '../models/user';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -30,7 +30,7 @@ export class UserService {
    getUsers(): Observable<User[]> {
     return this.http.get<User[]>(this.userUrl).pipe(
       tap(_ => this.log('fetched users')),
-      catchError(this.handleError<User[]>('getUsers',[]))
+      catchError(this.handleError<User[]>('getUsers'))
     );
   }
 

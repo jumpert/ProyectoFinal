@@ -6,15 +6,16 @@ import {
   OnInit,
   Output,
 } from '@angular/core';
-import { LoginService } from '../login/login.service';
+import { LoginService } from '../services/login.service';
 import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-nav-tool',
   templateUrl: './nav-tool.component.html',
   styleUrls: ['./nav-tool.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
+
 export class NavToolComponent implements OnInit {
   currentPath: string = '';
   get isUserLoggedIn(): boolean {
