@@ -24,6 +24,8 @@ export class ProductCardComponent implements OnInit {
   @Input() product!: Product;
   constructor(public cartItemService: CartItemService, private scService: ShoppingCartService, config: NgbCarouselConfig) {
     config.interval = 4000 ;
+    config.showNavigationIndicators = false;
+    config.showNavigationArrows = true;
   }
   ngOnInit(): void {
     this.getItems();

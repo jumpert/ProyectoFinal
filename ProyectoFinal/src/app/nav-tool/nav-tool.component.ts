@@ -18,6 +18,7 @@ import {Location} from '@angular/common';
 
 export class NavToolComponent implements OnInit {
   currentPath: string = '';
+  
   get isUserLoggedIn(): boolean {
     //return this.logService.loggedIn;
     return true;

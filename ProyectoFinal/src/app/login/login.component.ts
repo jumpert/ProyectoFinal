@@ -15,9 +15,10 @@ export class LoginComponent implements OnInit{
   userPsw:string = 'Ingrese su Contraseña';
   logText:string = 'Ingresar';
   endMsg:string = "Login";
-
+  id!:number;
+  
   public myForm!:FormGroup;
-
+  
   constructor(private logService: LoginService, private fb:FormBuilder) {}
 
   ngOnInit(): void {

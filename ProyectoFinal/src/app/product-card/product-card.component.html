@@ -1,25 +1,32 @@
 <div class="carousel">
+
   <ngb-carousel *ngIf="items">
     <ng-template *ngFor="let item of items" ngbSlide>
-
-      <div class=" d-flex justify-content-center">
-        <img src="{{ item.imageSrc }}" alt="{{ item.name }}" class="flex thumbnail align-text-center " />
+      <div class="row">
         
-      </div>
-      <div class="d-flex justify-content-start" id="text">
-        <div class="d-grid gap-3 ">
-          <div class="p-2 "><strong>{{ item.name }}</strong></div>
-          <div class="p-1 ">
-            <p>&dollar; {{ item.price }} </p>
+          <div class=" d-flex justify-content-center">
+            <div class="inner">
+              <img src="{{ item.imageSrc }}" alt="{{ item.name }}" class="flex thumbnail align-text-center " />
+            </div>
           </div>
-        </div>
+          <div class="d-flex justify-content-start" id="text">
+            <div class="d-grid gap-3 ">
+              <div class="p-2 "><strong>{{ item.name }}</strong></div>
+              <div class="p-1 ">
+                <p>&dollar; {{ item.price }} </p>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center bottom-50 ">
+
+            <button (click)="addToCart()" title="Añadir al Carrito">
+              <i class="bi bi-bag-plus"> Añadir al carrito</i>
+            </button>
+          </div>
+        
+        
       </div>
     </ng-template>
   </ngb-carousel>
-  <div class="d-flex justify-content-center bottom-50 ">
-    
-    <button (click)="addToCart()" title="Añadir al Carrito">
-        <i class="bi bi-bag-plus"> Añadir al carrito</i>
-      </button>
-  </div>
+
 </div>
