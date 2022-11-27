@@ -1,11 +1,11 @@
 .carousel{
     max-height: 50%;
-    
+   
 }
 
 .thumbnail {
     width: auto;
-    height: 22rem;
+    height: 18rem;
     border-radius: 4px;
     padding: 2px;
     min-width: 45px;
@@ -42,3 +42,14 @@ button {
     cursor: pointer;
 }
 
+.inner {
+    overflow: hidden;
+}
+
+.inner img{
+    transition: all 1.5s ease;
+}
+
+.inner:hover img {
+    transform:  scale(2);
+}
