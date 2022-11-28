@@ -1,28 +1,66 @@
-:host important{
+:host important {
     display: flex;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    
+
 }
+
 .thumbnail {
     width: 75pt;
     height: 75pt;
     /*border-radius: 50%;*/
-    
+
 }
-div {
+
+.fondo {
     background-image: linear-gradient(0deg, #a61bf7 18.58%, #5e00ea 81.42%);
     color: white;
     align-items: center;
-    
+
 }
-span {
-    font-size: 30pt;
-    font-weight: 600;
-    text-shadow: 0 0 10pt #000;
-}
+
 #navTool {
     margin-right: 1rem;
     align-content: center;
+}
+
+@media (min-width: 300px) {
+    span {
+        font-size: 20pt;
+        font-weight: 600;
+        text-shadow: 0 0 10pt #000;
+    }
+    .thumbnail {
+        width: 75pt;
+        height: 75pt;
+        /*border-radius: 50%;*/
+    
+    }
+    #navTool {
+        margin-right: 1rem;
+        align-content: end;
+        justify-content: end;
+        font-size: 1rem;
+    }
+
+}
+@media (min-width: 768px) {
+    span {
+        font-size: 30pt;
+        font-weight: 600;
+        text-shadow: 0 0 10pt #000;
+    }
+    .thumbnail {
+        width: 100pt;
+        height: 100pt;
+        /*border-radius: 50%;*/
+    
+    }
+    #navTool {
+        margin-right: 1rem;
+        align-content: end;
+        justify-content: end;
+        font-size: 1.5rem;
+    }
 }

@@ -22,7 +22,7 @@ export class LoginService {
     this.redirectToHome();
   }
 
-  private redirectToHome(): void {
-    this.router.navigate(['/']);
+  redirectToHome(): void {
+    this.router.navigate(['/home']);
   }
 }

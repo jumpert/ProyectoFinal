@@ -15,6 +15,7 @@ import { LoginModule } from './login/login.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserService } from './services/user.service';
 import { ShoppingCartService } from './services/shopping-cart.service';
+import { TicketComponent } from './ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ShoppingCartService } from './services/shopping-cart.service';
     ProductCardComponent,
     UserComponent,
     PageNotFoundComponent,
+    TicketComponent,
     
   ],
   imports: [

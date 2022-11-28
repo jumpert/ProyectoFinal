@@ -1,16 +1,31 @@
 .container-fluid{
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
+    align-items: center;
     height: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 0;
+    padding-right: 0;
     font-weight: 600;
     
 }
-a {
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
+@media (min-width: 400px) {
+    a {
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        color: white;
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 796px) {
+    a {
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+        color: white;
+        font-size: 1.25rem;
+    }
 }
 
 .navbar{
@@ -20,12 +35,93 @@ a {
 }
 
 .navbar-toggler{
+    position: relative;
     border: white;
     background-color: white;
     cursor: pointer;
     justify-content: center;
 } 
-a {
-    color: white;
-    font-size: 1.0rem;
+
+.navbar-toggler-icon{
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    scale: .5;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
+body {
+  background: #212121;
+  padding: 50px 0;
+}
+
+.nav {
+  font-family: 'Titillium Web';
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
+}
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .25em .5em;
+  padding: 0;
+  align-self: end;
+  text-align: end;
+}
+
+.nav a {
+  padding: .25em .4em;
+  position: relative;
+  text-decoration: none;
+}
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  align-self: end;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid #69ff12;
+  border-right: 3px solid #69ff12;
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid #69ff12;
+  border-left: 3px solid #69ff12;
+  transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 10px #000000;
 }
