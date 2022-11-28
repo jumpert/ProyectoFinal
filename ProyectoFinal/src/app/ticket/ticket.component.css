@@ -1,0 +1,124 @@
+.thumbnail{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    height: 100px;
+    width: 100px;
+    filter: grayscale(75%);
+   
+}
+.head {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.head p {
+    font-size: 2rem;
+}
+.title {
+    display:flex;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(136, 136, 136, 0.712);
+}
+.subtitle2 {
+    display:flex;
+    justify-content: end;
+    font-size: 18px;
+    font-weight: 600;
+    
+}
+.price {
+    display:flex;
+    justify-content: end;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.total-label {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 300px) {
+    .head {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .head p {
+        font-size: 1rem;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border: 1px solid rgba(136, 136, 136, 0.712);
+        border-radius: 20px;
+        margin-bottom: 1rem;
+    }
+    .card-body{
+        position:relative;
+        display: flex;
+        flex-direction: column;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    .text{
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+    }
+    .price {
+        display:flex;
+        justify-content: end;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+}
+
+@media (min-width: 768px){
+    .head {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+    .head p {
+        font-size: 1.5rem;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 100%;
+        padding: 1rem;
+        border: 1px solid rgba(136, 136, 136, 0.712);
+        border-radius: 20px;
+        margin-bottom: 1rem;
+    }
+    .card-body{
+        position:relative;
+        display: flex;
+        flex-direction: column;
+    }
+    p{
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    .text{
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+    }
+}

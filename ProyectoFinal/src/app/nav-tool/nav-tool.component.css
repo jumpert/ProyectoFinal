@@ -14,7 +14,7 @@
         padding: 0;
         cursor: pointer;
         color: white;
-        font-size: .75rem;
+        font-size: 1rem;
     }
 }
 
@@ -24,7 +24,7 @@
         padding: 0;
         cursor: pointer;
         color: white;
-        font-size: 1.0rem;
+        font-size: 1.25rem;
     }
 }
 
@@ -41,6 +41,17 @@
     cursor: pointer;
     justify-content: center;
 } 
+
+.navbar-toggler-icon{
+    position: relative;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    scale: .5;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
 
