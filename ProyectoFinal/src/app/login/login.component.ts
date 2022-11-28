@@ -2,6 +2,8 @@
 import { ChangeDetectionStrategy, EventEmitter, Component, OnInit, Output } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { UserService } from '../services/user.service';
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-login',
@@ -16,13 +18,20 @@ export class LoginComponent implements OnInit{
   logText:string = 'Ingresar';
   endMsg:string = "Login";
   id!:number;
-  
+  user?: User;
+  uEmail?:string;
+  uPassword?:string;
   public myForm!:FormGroup;
   
-  constructor(private logService: LoginService, private fb:FormBuilder) {}
+  constructor(private logService: LoginService, private fb:FormBuilder, private uS: UserService) {}
 
   ngOnInit(): void {
     this.myForm = this.createMyForm();
+    this.getUser();
+    if (this.user){
+      console.log(this.user);
+
+    }
   }
 
   private createMyForm():FormGroup{
@@ -39,8 +48,12 @@ export class LoginComponent implements OnInit{
   }
 
   public logIn() {
-    this.logService.logIn();
-    console.log("logeado");
+    this.logService.redirectToHome();
+  }
+
+  getUser(): void {
+    this.uS.getUser(1)
+      .subscribe(user => this.user = user);
   }
 
 }
