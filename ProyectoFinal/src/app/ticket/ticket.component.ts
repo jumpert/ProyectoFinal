@@ -32,4 +32,8 @@ export class TicketComponent implements OnInit {
     this.cartItems = [];
   }
 
+  title = 'Star Market';
+  elementType = 'https://jumpert.github.io/ProjectoFinalHost/';
+  value = 'Star Market App'+ new Date;
+
 }

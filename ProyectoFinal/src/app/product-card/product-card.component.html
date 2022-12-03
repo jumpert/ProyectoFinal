@@ -1,9 +1,9 @@
+<!-- <app-filtros></app-filtros>   -->
 <div class="carousel">
 
   <ngb-carousel *ngIf="items">
     <ng-template *ngFor="let item of items" ngbSlide>
       <div class="row">
-        
           <div class=" d-flex justify-content-center">
             <figure>
               <div class="inner">
@@ -23,15 +23,14 @@
             </div>
           </div>
           <div class="d-flex justify-content-center bottom-50 ">
-
             <button (click)="addToCart()" title="Añadir al Carrito">
               <i class="bi bi-bag-plus"> Añadir al carrito</i>
             </button>
           </div>
-        
-        
       </div>
     </ng-template>
   </ngb-carousel>
-
 </div>
+
+
+

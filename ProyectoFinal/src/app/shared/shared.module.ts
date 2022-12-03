@@ -6,6 +6,8 @@ import { HeaderComponent } from '../header/header.component';
 import { NavToolComponent } from '../nav-tool/nav-tool.component';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FiltrosComponent } from '../product-card/filtros/filtros.component';
+
 
 
 @NgModule({
@@ -13,7 +15,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     InputsFieldComponent,
     UseButtonComponent,
     HeaderComponent,
-    NavToolComponent
+    NavToolComponent,
+    FiltrosComponent,
   ],
   imports: [
     CommonModule,
@@ -24,7 +27,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     InputsFieldComponent,
     UseButtonComponent,
     HeaderComponent,
-    NavToolComponent
+    NavToolComponent,
+    FiltrosComponent
   ],
 })
 export class SharedModule { }

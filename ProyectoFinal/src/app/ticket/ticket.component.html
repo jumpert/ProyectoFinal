@@ -2,7 +2,11 @@
   <div class="card">
     <div class="row">
       <div class="col-4 head">
-        <img src="../assets/marketLogo.svg" alt="Logo App" class="d-flex justify-content-center thumbnail">
+        <img
+          src="../assets/marketLogo.svg"
+          alt="Logo App"
+          class="d-flex justify-content-center thumbnail"
+        />
       </div>
       <div class="col-8 head">
         <p class="align-middle">Star Market</p>
@@ -11,29 +15,46 @@
     <p class="title">Ticket de compra</p>
     <div class="row">
       <div class="col-6">
-        <p class="subtitle">Fecha: {{LocalDate}}</p>
+        <p class="subtitle">Fecha: {{ LocalDate }}</p>
       </div>
       <div class="col-6">
-        <p class="subtitle2 ">Hora: {{LocalTime}}</p>
+        <p class="subtitle2">Hora: {{ LocalTime }}</p>
       </div>
     </div>
-    
-    <div class="card-body ">
+
+    <div class="card-body">
       <ng-container *ngFor="let item of cartItems">
         <div class="row">
           <div class="col-8">
-            <p class="card-text">{{item.name}} x <strong>{{item.quantity}}</strong></p>
+            <p class="card-text">
+              {{ item.name }} x <strong>{{ item.quantity }}</strong>
+            </p>
           </div>
           <div class="col-4 price">
-            <p class="card-text">&dollar;{{item.price}}</p>
+            <p class="card-text">&dollar;{{ item.price }}</p>
           </div>
         </div>
       </ng-container>
-
     </div>
-    <p class="price"><span class="total-label">Total  </span>$ {{total}}</p>
+    <div class="bt">
+      <p class="price"><span class="total-label">Total </span>$ {{ total }}</p>
+    </div>
+    
+    <div class="d-flex justify-content-center">
+      <ngx-qrcode
+        (elementType)="elementType"
+        [value]="value"
+        cssClass="aclass">
+      </ngx-qrcode>
+    </div>
+
   </div>
 </div>
 <div class="d-flex justify-content-center sticky-bottom bg-light">
-  <app-use-button class="sm-3 sticky-bottom" id="bottomButton" [referenceText]="endMsg" routerLink="/home"></app-use-button>
+  <app-use-button
+    class="sm-3 sticky-bottom"
+    id="bottomButton"
+    [referenceText]="endMsg"
+    routerLink="/products"
+  ></app-use-button>
 </div>

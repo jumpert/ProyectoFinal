@@ -16,7 +16,7 @@ export class CartItemService {
 
   constructor( private http: HttpClient) { }
 
-  // GET chat from mock DB
+  // GET item from DB
   getItem(id: number): Observable<CartItem> {
     const url = `${this.itemsUrl}/${id}`;
     return this.http.get<CartItem>(url).pipe(
@@ -25,13 +25,23 @@ export class CartItemService {
     );
   }
 
-  // GET chat from mock DB
+  // GET item from DB
   getItems(): Observable<CartItem[]> {
     return this.http.get<CartItem[]>(this.itemsUrl).pipe(
       tap(_ => this.log('fetched items')),
       catchError(this.handleError<CartItem[]>('getItems'))
     );
   }
+
+  // GET item by type from DB
+  getItemsByType(type: string): Observable<CartItem[]> {
+    const url = `${this.itemsUrl}/type/${type}`;
+    return this.http.get<CartItem[]>(url).pipe(
+      tap(_ => this.log(`fetched items by type=${type}`)),
+      catchError(this.handleError<CartItem[]>(`getItemsByType type=${type}`))
+    );
+  }
+  
 
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

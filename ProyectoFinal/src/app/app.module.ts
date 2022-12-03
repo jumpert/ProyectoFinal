@@ -16,6 +16,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserService } from './services/user.service';
 import { ShoppingCartService } from './services/shopping-cart.service';
 import { TicketComponent } from './ticket/ticket.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NgxQRCodeModule } from '@techiediaries/ngx-qrcode';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,7 @@ import { TicketComponent } from './ticket/ticket.component';
     UserComponent,
     PageNotFoundComponent,
     TicketComponent,
+    HomePageComponent
     
   ],
   imports: [
@@ -35,7 +39,8 @@ import { TicketComponent } from './ticket/ticket.component';
     SharedModule,
     HttpClientModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxQRCodeModule
   ],
   providers: [
     CartItemService,

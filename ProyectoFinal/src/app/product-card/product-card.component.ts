@@ -4,6 +4,7 @@ import { CartItem } from '../models/cart-item';
 import { Product } from '../models/product';
 import { CartItemService } from '../services/cart-item.service';
 import { ShoppingCartService } from '../services/shopping-cart.service';
+import { FiltrosComponent } from './filtros/filtros.component';
 
 
 @Component({
@@ -14,7 +15,7 @@ import { ShoppingCartService } from '../services/shopping-cart.service';
 export class ProductCardComponent implements OnInit {
 
   swipeStartXPos?: number = undefined;
-
+  
   // NGB Carousel reference and config
   @ViewChild('ngcarousel', { static: false }) ngCarousel!: NgbCarousel;
   
