@@ -7,22 +7,24 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-  private loggedIn = new BehaviorSubject<boolean>(true);
-  loggedIn$ = this.loggedIn.asObservable();
-
+  private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  
   constructor(private router: Router) {}
 
-  logIn(): void {
-    this.loggedIn.next(true);
-    this.redirectToHome();
+  get logStatus() {
+    return this.loggedIn.asObservable();
   }
 
-  logOut(): void {
+  //set loggedIn true
+  set logIn(data: boolean){
+    this.loggedIn.next(true);
+  }
+
+  set logOut(data: boolean) {
     this.loggedIn.next(false);
-    this.redirectToHome();
   }
 
   redirectToHome(): void {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/']);
   }
 }

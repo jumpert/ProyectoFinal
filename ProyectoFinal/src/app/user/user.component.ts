@@ -18,7 +18,6 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
     this.getUser(1);
-    console.log(this.users.length);
   }
 
   getUsers(): void {

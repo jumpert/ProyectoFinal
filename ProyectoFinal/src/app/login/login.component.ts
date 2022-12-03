@@ -28,15 +28,12 @@ export class LoginComponent implements OnInit{
   ngOnInit(): void {
     this.myForm = this.createMyForm();
     this.getUser();
-    if (this.user){
-      console.log(this.user);
-
-    }
+    
   }
 
   private createMyForm():FormGroup{
     return this.fb.group({
-      email:['',[Validators.required]],
+      email:['',Validators.required],
       password:['',Validators.required]
     });
   }
@@ -48,6 +45,7 @@ export class LoginComponent implements OnInit{
   }
 
   public logIn() {
+    this.logService.logIn;
     this.logService.redirectToHome();
   }
 

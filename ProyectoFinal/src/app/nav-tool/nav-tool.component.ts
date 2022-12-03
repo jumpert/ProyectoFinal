@@ -8,6 +8,7 @@ import {
 } from '@angular/core';
 import { LoginService } from '../services/login.service';
 import {Location} from '@angular/common';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav-tool',
@@ -18,7 +19,7 @@ import {Location} from '@angular/common';
 
 export class NavToolComponent implements OnInit {
   currentPath: string = '';
-  
+  public loggedIn$: Observable<boolean>;
   get isUserLoggedIn(): boolean {
     //return this.logService.loggedIn;
     return true;
@@ -29,7 +30,9 @@ export class NavToolComponent implements OnInit {
   @HostListener('click') onClick(): void {
     this.closeTool.emit();
   }
-  constructor(private logService: LoginService, private location: Location) { }
+  constructor(private logService: LoginService, private location: Location) { 
+    this.loggedIn$ = logService.logStatus;
+  }
 
 
   ngOnInit(): void {
@@ -37,7 +40,7 @@ export class NavToolComponent implements OnInit {
   }
 
   logOut(): void {
-    this.logService.logOut();
+    this.logService.logOut;
   }
   public isMenuCollapsed = true;
   

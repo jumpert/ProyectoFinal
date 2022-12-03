@@ -1,10 +1,11 @@
-<nav class="navbar navbar-expand-sm  ">
+<nav class="navbar navbar-expand-sm">
 	<div class="container-fluid">
 		<a class="navbar-brand" [routerLink]="'.'"></a>
 
-		<button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+		<button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+			&#9776;
+		</button>
 
-		
 		<div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse ml-auto">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProyectoFinal';
-
+  public loggedIn$: Observable<boolean>;
   isCartVisible = false;
   isMenuOpened = true;
-
+ constructor(public loginService: LoginService) {
+    this.loggedIn$ = loginService.logStatus;
+  } 
+ 
   toggleCartVisibility(): void {
     this.isCartVisible = !this.isCartVisible;
   }
@@ -18,4 +23,5 @@ export class AppComponent {
   hideMenu(): void {
     this.isMenuOpened = false;
   }
+  
 }

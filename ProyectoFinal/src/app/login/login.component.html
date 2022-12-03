@@ -11,6 +11,9 @@
             <input formControlName="email" type="text" class="form-control-email shadow p-3 mb-5 bg-body rounded"
               id="inputEmail" placeholder="{{userEmail}}">
           </div>
+          <div *ngIf="myForm.controls['email'].invalid && (myForm.controls['email'].dirty || myForm.controls['email'].touched)" class="alert">
+            
+        </div>
         </div>
         <div class="mb-3 row">
           <div class="col-sm-10">
